@@ -12,6 +12,8 @@
       <br>
       <button id="btn3" onclick="setLoc();">SET LOCATION</button>
       <br>
+      <h1 id="win-h1-1"></h1>
+      <br>
       <hr>
       <div id="loc-3">
         <br>
@@ -41,6 +43,8 @@
         <br>
       </div>
       <hr>
+      <br>
+      <button id="win-btn1" onclick="restart();">RESTART</button>
     </center>
   </body>
 </html>
@@ -52,6 +56,7 @@
   }
   h1 {
     font-weight: 700;
+    color: orange;
   }
   button {
     background-color: orange;
@@ -78,6 +83,12 @@
     width: 60px;
     height: 60px;
     background-color: red;
+  }
+  #win-h1-1 {
+    display: none;
+  }
+  #win-btn1 {
+    display: none;
   }
 </style>
 <script>
@@ -199,6 +210,15 @@
     }
     if (plr.classList.contains("loc-3") && rz.classList.contains("loc-3") || plr.classList.contains("loc-2") && rz.classList.contains("loc-2") || plr.classList.contains("loc-1") && rz.classList.contains("loc-1") || plr.classList.contains("loc-0") && rz.classList.contains("loc-0") || plr.classList.contains("loc--1") && rz.classList.contains("loc--1") || plr.classList.contains("loc--2") && rz.classList.contains("loc--2") || plr.classList.contains("loc--3") && rz.classList.contains("loc--3")){
       rz.appendChild(plr);
+      document.getElementById("win-h1-1").innerHTML = "YOU LOSE";
     }
+    else {
+      document.getElementById("win-h1-1").innerHTML = "YOU WIN";
+    }
+    document.getElementById("win-h1-1").style.display = "block";
+    document.getElementById("win-btn1").style.display = "block";
+  }
+  function restart(){
+    location.reload();
   }
 </script>
