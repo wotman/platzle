@@ -1,1 +1,113 @@
-
+<html>
+  <head>
+    <title>PLATZLE</title>
+  </head>
+  <body>
+    <center>
+      <button id="btn1" onclick="moveUp();">MOVE UP</button>
+      <br>
+      <br>
+      <button id="btn2" onclick="moveDown();">MOVE DOWN</button>
+      <br>
+      <hr>
+      <div id="loc-3">
+        <br>
+      </div>
+      <div id="loc-2">
+        <br>
+      </div>
+      <div id="loc-1">
+        <br>
+      </div>
+      <div id="loc-0">
+        <div id="plr" class="loc-0"></div>
+      </div>
+      <div id="loc--1">
+        <br>
+      </div>
+      <div id="loc--2">
+        <br>
+      </div>
+      <div id="loc--3">
+        <br>
+      </div>
+      <hr>
+    </center>
+  </body>
+</html>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+  
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+  h1 {
+    font-weight: 700;
+  }
+  button {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.3s ease;
+  }
+  button:hover {
+    background-color: #db9109;
+    cursor: pointer;
+  }
+  #plr {
+    width: 30px;
+    height: 50px;
+  }
+</style>
+<script>
+  var plr = document.getElementById("plr");
+  var loc = [
+    document.getElementById("loc--3"),
+    document.getElementById("loc--2"),
+    document.getElementById("loc--1"),
+    document.getElementById("loc-0"),
+    document.getElementById("loc-1"),
+    document.getElementById("loc-2"),
+    document.getElementById("loc-3")
+  ]
+  
+  function moveUp(){
+    plr.parentNode.removeChild(plr);
+    plrn = document.createElement("DIV");
+    plrn.id = "plr";
+    if (plr.classList.contains("loc--3")){
+      plrn.classList.add("loc--2");
+      loc[1].appendChild(plrn);
+    }
+    if (plr.classList.contains("loc--2")){
+      plrn.classList.add("loc--1");
+      loc[2].appendChild(plrn);
+    }
+    if (plr.classList.contains("loc--1")){
+      plrn.classList.add("loc-0");
+      loc[3].appendChild(plrn);
+    }
+    if (plr.classList.contains("loc-0")){
+      plrn.classList.add("loc-1");
+      loc[4].appendChild(plrn);
+    }
+    if (plr.classList.contains("loc-1")){
+      plrn.classList.add("loc-2");
+      loc[5].appendChild(plrn);
+    }
+    if (plr.classList.contains("loc-2")){
+      plrn.classList.add("loc-3");
+      loc[6].appendChild(plrn);
+    }
+    if (plr.classList.contains("loc-3")){
+      plrn.classList.add("loc-3");
+      loc[6].appendChild(plrn);
+    }
+    plr = document.getElementById("plr");
+  }
+</script>
