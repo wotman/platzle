@@ -16,31 +16,32 @@
       <br id="br6">
       <hr>
       <div id="loc-3">
-        <br>
+        <br id="lbr-3">
       </div>
       <br>
       <div id="loc-2">
-        <br>
+        <br id="lbr-2">
       </div>
       <br>
       <div id="loc-1">
-        <br>
+        <br id="lbr-1">
       </div>
       <br>
       <div id="loc-0">
+        <br id="lbr-0">
         <div id="plr" class="loc-0"></div>
       </div>
       <br>
       <div id="loc--1">
-        <br>
+        <br id="lbr--1">
       </div>
       <br>
       <div id="loc--2">
-        <br>
+        <br id="lbr--2">
       </div>
       <br>
       <div id="loc--3">
-        <br>
+        <br id="lbr--3">
       </div>
       <hr>
       <br>
@@ -90,6 +91,9 @@
   #win-btn1 {
     display: none;
   }
+  #lbr-0 {
+    display: none;
+  }
 </style>
 <script>
   var plr = document.getElementById("plr");
@@ -102,6 +106,15 @@
     document.getElementById("loc-2"),
     document.getElementById("loc-3")
   ];
+  var lbr = [
+    document.getElementById("lbr--3"),
+    document.getElementById("lbr--2"),
+    document.getElementById("lbr--1"),
+    document.getElementById("lbr-0"),
+    document.getElementById("lbr-1"),
+    document.getElementById("lbr-2"),
+    document.getElementById("lbr-3")
+  ];
   
   function moveUp(){
     plr.parentNode.removeChild(plr);
@@ -110,30 +123,73 @@
     if (plr.classList.contains("loc--3")){
       plrn.classList.add("loc--2");
       loc[1].appendChild(plrn);
+      
     }
     if (plr.classList.contains("loc--2")){
       plrn.classList.add("loc--1");
       loc[2].appendChild(plrn);
+      lbr[0].style.display = "block";
+      lbr[1].style.display = "block";
+      lbr[2].style.display = "none";
+      lbr[3].style.display = "block";
+      lbr[4].style.display = "block";
+      lbr[5].style.display = "block";
+      lbr[6].style.display = "block";
     }
     if (plr.classList.contains("loc--1")){
       plrn.classList.add("loc-0");
       loc[3].appendChild(plrn);
+      lbr[0].style.display = "block";
+      lbr[1].style.display = "block";
+      lbr[2].style.display = "block";
+      lbr[3].style.display = "none";
+      lbr[4].style.display = "block";
+      lbr[5].style.display = "block";
+      lbr[6].style.display = "block";
     }
     if (plr.classList.contains("loc-0")){
       plrn.classList.add("loc-1");
       loc[4].appendChild(plrn);
+      lbr[0].style.display = "block";
+      lbr[1].style.display = "block";
+      lbr[2].style.display = "block";
+      lbr[3].style.display = "block";
+      lbr[4].style.display = "none";
+      lbr[5].style.display = "block";
+      lbr[6].style.display = "block";
     }
     if (plr.classList.contains("loc-1")){
       plrn.classList.add("loc-2");
       loc[5].appendChild(plrn);
+      lbr[0].style.display = "block";
+      lbr[1].style.display = "block";
+      lbr[2].style.display = "block";
+      lbr[3].style.display = "block";
+      lbr[4].style.display = "block";
+      lbr[5].style.display = "none";
+      lbr[6].style.display = "block";
     }
     if (plr.classList.contains("loc-2")){
       plrn.classList.add("loc-3");
       loc[6].appendChild(plrn);
+      lbr[0].style.display = "block";
+      lbr[1].style.display = "block";
+      lbr[2].style.display = "block";
+      lbr[3].style.display = "block";
+      lbr[4].style.display = "block";
+      lbr[5].style.display = "block";
+      lbr[6].style.display = "none";
     }
     if (plr.classList.contains("loc-3")){
       plrn.classList.add("loc-3");
       loc[6].appendChild(plrn);
+      lbr[0].style.display = "block";
+      lbr[1].style.display = "block";
+      lbr[2].style.display = "block";
+      lbr[3].style.display = "block";
+      lbr[4].style.display = "block";
+      lbr[5].style.display = "block";
+      lbr[6].style.display = "none";
     }
     plr = document.getElementById("plr");
   }
@@ -144,30 +200,79 @@
     if (plr.classList.contains("loc--3")){
       plrn.classList.add("loc--3");
       loc[0].appendChild(plrn);
+      lbr[0].style.display = "none";
+      lbr[1].style.display = "block";
+      lbr[2].style.display = "block";
+      lbr[3].style.display = "block";
+      lbr[4].style.display = "block";
+      lbr[5].style.display = "block";
+      lbr[6].style.display = "block";
     }
     if (plr.classList.contains("loc--2")){
       plrn.classList.add("loc--3");
       loc[0].appendChild(plrn);
+      lbr[0].style.display = "none";
+      lbr[1].style.display = "block";
+      lbr[2].style.display = "block";
+      lbr[3].style.display = "block";
+      lbr[4].style.display = "block";
+      lbr[5].style.display = "block";
+      lbr[6].style.display = "block";
     }
     if (plr.classList.contains("loc--1")){
       plrn.classList.add("loc--2");
       loc[1].appendChild(plrn);
+      lbr[0].style.display = "block";
+      lbr[1].style.display = "none";
+      lbr[2].style.display = "block";
+      lbr[3].style.display = "block";
+      lbr[4].style.display = "block";
+      lbr[5].style.display = "block";
+      lbr[6].style.display = "block";
     }
     if (plr.classList.contains("loc-0")){
       plrn.classList.add("loc--1");
       loc[2].appendChild(plrn);
+      lbr[0].style.display = "block";
+      lbr[1].style.display = "block";
+      lbr[2].style.display = "none";
+      lbr[3].style.display = "block";
+      lbr[4].style.display = "block";
+      lbr[5].style.display = "block";
+      lbr[6].style.display = "block";
     }
     if (plr.classList.contains("loc-1")){
       plrn.classList.add("loc-0");
       loc[3].appendChild(plrn);
+      lbr[0].style.display = "block";
+      lbr[1].style.display = "block";
+      lbr[2].style.display = "block";
+      lbr[3].style.display = "none";
+      lbr[4].style.display = "block";
+      lbr[5].style.display = "block";
+      lbr[6].style.display = "block";
     }
     if (plr.classList.contains("loc-2")){
       plrn.classList.add("loc-1");
       loc[4].appendChild(plrn);
+      lbr[0].style.display = "block";
+      lbr[1].style.display = "block";
+      lbr[2].style.display = "block";
+      lbr[3].style.display = "block";
+      lbr[4].style.display = "none";
+      lbr[5].style.display = "block";
+      lbr[6].style.display = "block";
     }
     if (plr.classList.contains("loc-3")){
       plrn.classList.add("loc-2");
       loc[5].appendChild(plrn);
+      lbr[0].style.display = "block";
+      lbr[1].style.display = "block";
+      lbr[2].style.display = "block";
+      lbr[3].style.display = "block";
+      lbr[4].style.display = "block";
+      lbr[5].style.display = "none";
+      lbr[6].style.display = "block";
     }
     plr = document.getElementById("plr");
   }
