@@ -5,15 +5,15 @@
   <body>
     <center>
       <button id="btn1" onclick="moveUp();">MOVE UP</button>
-      <br>
-      <br>
+      <br id="br1">
+      <br id="br2">
       <button id="btn2" onclick="moveDown();">MOVE DOWN</button>
-      <br>
-      <br>
+      <br id="br3">
+      <br id="br4">
       <button id="btn3" onclick="setLoc();">SET LOCATION</button>
-      <br>
+      <br id="br5">
       <h1 id="win-h1-1"></h1>
-      <br>
+      <br id="br6">
       <hr>
       <div id="loc-3">
         <br>
@@ -217,6 +217,12 @@
     }
     document.getElementById("win-h1-1").style.display = "block";
     document.getElementById("win-btn1").style.display = "block";
+    document.getElementById("br1").style.display = "none";
+    document.getElementById("br2").style.display = "none";
+    document.getElementById("br3").style.display = "none";
+    document.getElementById("br4").style.display = "none";
+    document.getElementById("br5").style.display = "none";
+    document.getElementById("br6").style.display = "none";
   }
   function restart(){
     location.reload();
