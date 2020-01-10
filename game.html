@@ -72,6 +72,7 @@
     width: 30px;
     height: 30px;
     background-color: orange;
+    transform: translateY(14px);
   }
   #redzone {
     width: 60px;
@@ -196,6 +197,9 @@
     if (rand == 6){
       rz.classList.add("loc-3");
       loc[6].appendChild(rz);
+    }
+    if (plr.classList == rz.classList){
+      rz.appendChild(plr);
     }
   }
 </script>
