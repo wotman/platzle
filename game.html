@@ -9,6 +9,9 @@
       <br>
       <button id="btn2" onclick="moveDown();">MOVE DOWN</button>
       <br>
+      <br>
+      <button id="btn3" onclick="setLoc();">SET LOCATION</button>
+      <br>
       <hr>
       <div id="loc-3">
         <br>
@@ -69,6 +72,11 @@
     width: 30px;
     height: 30px;
     background-color: orange;
+  }
+  #redzone {
+    width: 30px;
+    height: 30px;
+    background-color: red;
   }
 </style>
 <script>
@@ -150,5 +158,10 @@
       loc[5].appendChild(plrn);
     }
     plr = document.getElementById("plr");
+  }
+  function setLoc(){
+    document.getElementById("btn1").style.display = "none";
+    document.getElementById("btn2").style.display = "none";
+    document.getElementById("btn3").style.display = "none";
   }
 </script>
