@@ -74,9 +74,10 @@
     background-color: orange;
   }
   #redzone {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     background-color: red;
+    opacity: 0.6;
   }
 </style>
 <script>
@@ -89,7 +90,7 @@
     document.getElementById("loc-1"),
     document.getElementById("loc-2"),
     document.getElementById("loc-3")
-  ]
+  ];
   
   function moveUp(){
     plr.parentNode.removeChild(plr);
@@ -163,5 +164,38 @@
     document.getElementById("btn1").style.display = "none";
     document.getElementById("btn2").style.display = "none";
     document.getElementById("btn3").style.display = "none";
+    
+    var rand = Math.floor(Math.random() * loc.length);
+    
+    rz = document.createElement("DIV");
+    rz.id = "redzone";
+    if (rand == 0){
+      rz.classList.add("loc--3");
+      loc[0].appendChild(rz);
+    }
+    if (rand == 1){
+      rz.classList.add("loc--2");
+      loc[1].appendChild(rz);
+    }
+    if (rand == 2){
+      rz.classList.add("loc--1");
+      loc[2].appendChild(rz);
+    }
+    if (rand == 3){
+      rz.classList.add("loc-0");
+      loc[3].appendChild(rz);
+    }
+    if (rand == 4){
+      rz.classList.add("loc-1");
+      loc[4].appendChild(rz);
+    }
+    if (rand == 5){
+      rz.classList.add("loc-2");
+      loc[5].appendChild(rz);
+    }
+    if (rand == 6){
+      rz.classList.add("loc-3");
+      loc[6].appendChild(rz);
+    }
   }
 </script>
