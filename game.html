@@ -117,4 +117,38 @@
     }
     plr = document.getElementById("plr");
   }
+  function moveDown(){
+    plr.parentNode.removeChild(plr);
+    plrn = document.createElement("DIV");
+    plrn.id = "plr";
+    if (plr.classList.contains("loc--3")){
+      plrn.classList.add("loc--3");
+      loc[0].appendChild(plrn);
+    }
+    if (plr.classList.contains("loc--2")){
+      plrn.classList.add("loc--3");
+      loc[0].appendChild(plrn);
+    }
+    if (plr.classList.contains("loc--1")){
+      plrn.classList.add("loc--2");
+      loc[1].appendChild(plrn);
+    }
+    if (plr.classList.contains("loc-0")){
+      plrn.classList.add("loc--1");
+      loc[2].appendChild(plrn);
+    }
+    if (plr.classList.contains("loc-1")){
+      plrn.classList.add("loc-0");
+      loc[3].appendChild(plrn);
+    }
+    if (plr.classList.contains("loc-2")){
+      plrn.classList.add("loc-1");
+      loc[4].appendChild(plrn);
+    }
+    if (plr.classList.contains("loc-3")){
+      plrn.classList.add("loc-2");
+      loc[5].appendChild(plrn);
+    }
+    plr = document.getElementById("plr");
+  }
 </script>
